@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "web-psi-six-6yxsgrn1e6.vercel.app";
 
 function App() {
   const [students, setStudents] = useState([]);
