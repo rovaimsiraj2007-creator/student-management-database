@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API_URL = "web-psi-six-6yxsgrn1e6.vercel.app";
+const API_URL = "";
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -20,7 +20,8 @@ function App() {
   // Get Students
   const getStudents = async () => {
     try {
-      const response = await axios.get(`${API_URL}/`);
+      const response = await axios.get(`${API_URL}/students`);
+      console.log("Res", response)
       setStudents(response.data.message);
     } catch (error) {
       console.log("GET ERROR:", error);
@@ -38,6 +39,8 @@ function App() {
       [e.target.name]: e.target.value,
     });
   };
+
+  console.log("students", students)
 
   // Add / Update Student
   const handleSubmit = async (e) => {

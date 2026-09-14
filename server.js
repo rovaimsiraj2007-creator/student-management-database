@@ -31,7 +31,7 @@ app.post("/student", async (req, res) => {
 });
 
 
-app.get("/", async (req, res) => {
+app.get("/students", async (req, res) => {
     try {
         //  res.send("Server is working!");
         const students = await db.query(`SELECT * FROM students;`)
